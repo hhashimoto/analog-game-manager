@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 
-from .models import Item
+from app.models import Item
 
 def index(request):
     items = Item.objects.order_by('-created_at')
