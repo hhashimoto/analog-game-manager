@@ -5,11 +5,14 @@
 <h1>ゲーム登録画面</h1>
 
 <form action="{% url 'register' %}" method="post">
-{% csrf_token %}
+  {% csrf_token %}
+  {{ form.as_p }}
   <div>
+    <!--
     <label for="name">ゲームタイトル: </label>
     <input type="text" id="name" name="name" placeholder="ゲームタイトルを入力してちょんまげ。" size="32" minlength="1" maxlength="128" required>
     <span class="validity"></span>
+    -->
   </div>
   <div>
     <button>登録！</button>
