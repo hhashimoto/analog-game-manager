@@ -3,6 +3,6 @@ python:
   - "3.6"
 install:
   - pip install pipenv
-  - pipenv install --deploy
 script:
+  - pipenv install --skip-lock
   - pipenv run python manage.py test app
