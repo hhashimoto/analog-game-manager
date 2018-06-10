@@ -1,2 +1,2 @@
-from app.views.index import index
-from app.views.register import register
+from .index import index
+from .register import register
