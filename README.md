@@ -10,8 +10,13 @@
 
 ## もろもろ
 
-- シェルへのアクセス
-
 ```
+# ボリュームをマウントしてbashをたたく
 $ docker run -it -v $(pwd):/code django /bin/bash
+
+# ポートフォワーディングもしておきたい
+$ docker run -it -p 8000:8000 -v $(pwd):/code django /bin/bash
+
+# ゲストにて、pipenv環境セットアップしたらとりあえず動かしてみる
+/code# pipenv run python manage.py runserver 0.0.0.0:8000
 ```
