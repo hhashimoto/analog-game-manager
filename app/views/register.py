@@ -1,15 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 
-from .models import Item
-from .forms import ItemForm
-
-
-def index(request):
-    items = Item.objects.order_by('-created_at')
-    resp_text = '<br>'.join([item.name for item in items])
-    return HttpResponse(resp_text)
-
+from app.forms import ItemForm
 
 def register(request):
     if request.method == 'POST':
@@ -20,3 +12,4 @@ def register(request):
     else:
         form = ItemForm()
     return render(request, 'register.html', {'form': form})
+
