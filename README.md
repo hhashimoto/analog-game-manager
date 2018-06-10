@@ -7,3 +7,11 @@
 - Pipenvを使ってみる
 - Docker Composeで
 - Arukasが使えればいいなー
+
+## もろもろ
+
+- シェルへのアクセス
+
+```
+$ docker run -it -v $(pwd):/code django /bin/bash
+```
